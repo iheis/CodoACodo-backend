@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Almacén</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+</head>
+
+
+<body class="d-flex flex-column">
+    <header>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container text-center">
+                <a class="navbar-brand" href="{{ url_for('index') }}">
+                    <img src="{{ url_for('static', filename='img/almacen.svg') }}" alt="logo" width="30px" class="mr-2">
+                    <h2 class="text-white d-inline-block align-middle">Almacén</h2>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main class="flex-shrink-0">
+        <div class="container mt-4">
+            <div class="container mt-5">
+                <div class="alert alert-{{ category }} alert-dismissible fade show shadow border" role="alert">
+                   <h3 class="text-center">{{ message }}</h3>
+                    <hr>
+                    <div class="text-right">
+                        <a href="{{ url_for('index') }}" class="btn btn-dark">Inicio</a>
+                        <a href="javascript:history.back()" class="btn btn-secondary ml-2">Volver</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer py-3 bg-dark text-white mt-auto">
+    <div class="container text-center">
+        <p>Grupo 13 | Codo a codo | 2024</p>
+    </div>
+</footer>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
