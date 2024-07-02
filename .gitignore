@@ -1,0 +1,17 @@
+# Ignorar entornos virtuales
+venv/
+myenv/
+
+# Ignorar archivos y directorios específicos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos de logs
+*.log
+
+# Ignorar archivos de compilación
+*.pyc
+__pycache__/
+
+# Ignorar otros directorios
+node_modules/
